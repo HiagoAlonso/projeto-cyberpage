@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "squid";
+    src: url(fonts/Game\ Of\ Squids.otf);
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: "squid";
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
