@@ -11,6 +11,15 @@
 </head>
 <body>
     <header>
+        <section class="header-menubar">
+            <span id="logo"><a href="#">Hackien</a></span>
+            <ul>
+                <li><a href="#" class="menu-item">a</a></li>
+                <li><a href="#" class="menu-item">b</a></li>
+                <li><a href="#" class="menu-item">c</a></li>
+                <li><a href="#" class="menu-item">d</a></li>
+            </ul>
+        </section>
         <section class="header-content">
             <div class="header-title">
                 <h1>O futuro Ja chegou</h1>
@@ -18,6 +27,7 @@
             </div>
         </section>
     </header>
+    
     <nav>
         <ul class="social-medias">
             <li style="--clr: #7913BF;">
@@ -35,8 +45,24 @@
         </ul>
     </nav>
     
-    
     <main>
     </main>
+
+    <script>
+
+        let menuItens = document.querySelectorAll("a.menu-item")
+        let bar = document.querySelector(".header-menubar > ul")
+
+        menuItens.forEach(element => {
+    
+            element.addEventListener('mouseenter', function() {
+                let coordenada = this.getBoundingClientRect()
+                console.log(coordenada)
+                bar.style('background-color:red;')
+                return
+            })
+        });
+
+    </script>
 </body>
 </html>

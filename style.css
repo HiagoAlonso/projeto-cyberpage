@@ -5,16 +5,6 @@
     src: url(fonts/Game\ Of\ Squids.otf);
 }
 
-@keyframes main-animation{
-
-    50% {
-        border-top: 2px solid var(--red);
-    }
-    80% {
-        border-top: 2px solid var(--blue);
-    }
-}
-
 :root {
     --bg: black;
     --blue: #4612B5;
@@ -36,12 +26,49 @@ body {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
     display: flex;
     position: relative;
     background: black url(images/gabriel-perez-QkvIvL8wYuw-unsplash.jpg) bottom center/cover fixed no-repeat;
+}
 
+.header-menubar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.header-menubar a {
+    text-decoration: none;
+    color: black;
+    text-shadow: 0 0 4px var(--cyan);
+}
+
+.header-menubar #logo{
+    font-size: 3em;
+}
+
+.header-menubar ul {
+    display: flex;
+    list-style: none;
+    gap: 75px;
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+
+.header-menubar ul::after {
+    content: '';
+    position: absolute;
+    top: 80px;
+    width: 24vw; min-width: 325px;
+    height: 1px;
+    border: 1px solid #00d5ff8a;
+    background-color: black;
 }
 
 .header-content{
@@ -56,7 +83,7 @@ header {
 .header-title {
     color: black;
     text-shadow: 0 0 10px var(--cyan);
-    
+    transform: translateY(-40px)
 }
 
 .header-title > h1 {
@@ -86,3 +113,4 @@ header {
 main {
     height: 100vw;
 }
+
