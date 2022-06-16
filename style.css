@@ -37,19 +37,14 @@ body {
 
 header {
     height: 100vh;
+    width: 100%;
     display: flex;
     position: relative;
-}
+    background: black url(images/gabriel-perez-QkvIvL8wYuw-unsplash.jpg) bottom center/cover fixed no-repeat;
 
-.header-image {
-    background: black url(images/gabriel-perez-QkvIvL8wYuw-unsplash.jpg) bottom center/cover fixed;
-    height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
 }
 
 .header-content{
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
