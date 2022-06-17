@@ -47,22 +47,5 @@
     
     <main>
     </main>
-
-    <script>
-
-        let menuItens = document.querySelectorAll("a.menu-item")
-        let bar = document.querySelector(".header-menubar > ul")
-
-        menuItens.forEach(element => {
-    
-            element.addEventListener('mouseenter', function() {
-                let coordenada = this.getBoundingClientRect()
-                console.log(coordenada)
-                bar.style('background-color:red;')
-                return
-            })
-        });
-
-    </script>
 </body>
 </html>

@@ -5,6 +5,24 @@
     src: url(fonts/Game\ Of\ Squids.otf);
 }
 
+@keyframes animationPulsate {
+    0% {
+        text-shadow: 0 0 10px var(--cyan);
+    }
+    1% {
+        text-shadow: 0 0 20px black;
+        color: var(--cyan);
+    }
+    99% {
+        text-shadow: 0 0 20px black;
+        color: var(--cyan);
+    }
+    100% {
+        text-shadow: 0 0 10px var(--cyan);
+        color: black;
+    }
+}
+
 :root {
     --bg: black;
     --blue: #4612B5;
@@ -49,6 +67,10 @@ header {
     text-shadow: 0 0 4px var(--cyan);
 }
 
+.header-menubar a:hover {
+    animation: animationPulsate 50s infinite;
+}
+
 .header-menubar #logo{
     font-size: 3em;
 }
@@ -59,16 +81,6 @@ header {
     gap: 75px;
     font-size: 2em;
     padding-bottom: 10px;
-}
-
-.header-menubar ul::after {
-    content: '';
-    position: absolute;
-    top: 80px;
-    width: 24vw; min-width: 325px;
-    height: 1px;
-    border: 1px solid #00d5ff8a;
-    background-color: black;
 }
 
 .header-content{
